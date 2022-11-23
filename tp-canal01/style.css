@@ -6,33 +6,62 @@
   background-color: azure;
 }
 * body header {
-  background-color: #957dad;
+  background-color: #59c1bd;
+  position: fixed;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 * body header nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   height: 80px;
+  display: grid;
+  grid-template-columns: 5% 15%;
+  align-items: center;
+  justify-content: space-between;
 }
 * body header nav ul {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
 }
 * body header nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
+  border-left: solid #cff5e7 2px;
+  height: 80px;
 }
 * body header nav ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
-  color: #FEC8D8;
+  color: #0d4c92;
+  height: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-transform: uppercase;
+}
+@media (hover: hover) {
+  * body header nav ul li a:hover {
+    background-color: rgba(13, 76, 146, 0.5);
+    color: #cff5e7;
+    transition: 0.5s;
+  }
+}
+* body header nav ul li a:active {
+  background-color: rgba(13, 76, 146, 0.5);
+  color: #cff5e7;
 }
 * body header nav .logo {
-  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 * body header nav .logo i {
-  color: aqua;
-  font-size: 40px;
+  color: #0d4c92;
+  font-size: 50px;
 }/*# sourceMappingURL=style.css.map */
