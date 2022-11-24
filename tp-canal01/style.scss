@@ -9,21 +9,25 @@
             background-color: rgba($color: #59c1bd, $alpha: 1.0);
             position: fixed;
             width: 100%;
-            margin-bottom: 1rem;
-
-            
-            
-
+            margin-bottom: 1rem;          
 
             nav {
                 height: 80px;
                 display: grid;
-                grid-template-columns: 5% 15%;
+                grid-template-columns: auto 10%;
                 align-items: center;
                 justify-content: space-between;
 
-                
-                
+                .menu-container{
+                    display:flex ;
+
+                    #btn-menu{
+                        display: none;
+                    }
+
+
+                }
+
                 
 
                 ul {
@@ -52,9 +56,13 @@
                             height: 100%;
                             padding-left: 2rem;
                             padding-right: 2rem;                        
-                            text-transform: uppercase;
+                            text-transform: uppercase;             
                             
                         }
+                        #facturar{
+                            border-right: solid #cff5e7 2px;
+                        }
+
 
                         @media  (hover: hover){
                             a:hover{
@@ -65,8 +73,9 @@
                         }
 
                         a:active{
-                            background-color: rgba($color: #0d4c92, $alpha: 0.5);
-                            color: #cff5e7;
+                            background-color: rgba($color: #cff5e7, $alpha: 0.5);
+                            color: #0d4c92;
+                            transition: 0s;
                             
                         }
                         
@@ -79,6 +88,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    padding-right: 30px;
                     i{
                         color: #0d4c92;
                         font-size: 50px;
@@ -91,8 +101,130 @@
 
             }
 
+        }
 
+        @media (max-width: 1180px) {
+            header {
+                        
+    
+                nav {
 
+                    
+                    
+    
+                    .menu-container{
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 20px;
+                        width: 50px;
+                        height: 30px;
+                        cursor: pointer;
+
+                        #btn-menu{
+                            display: none;
+                        }
+                        
+
+                       .lbl-menu{
+                        width: 50px;
+                        height: 30px;
+                        position: relative;
+                        cursor: pointer;
+                       }
+
+                       .lbl-menu #span-menu1, #span-menu2 ,#span-menu3 {
+                        position: absolute;                       
+                        background: #cff5e7 ;
+                        width: 40px;
+                        height: 5px;                       
+                        transition: all 400ms ease;
+                       }
+
+                       #span-menu1{
+                        top: 11px;
+                       }
+
+                       #span-menu3{
+                        top: 22px;
+                       }
+
+                       #btn-menu:checked  ~ .lbl-menu #span-menu1{
+                        opacity: 0;
+                       }
+
+                       #btn-menu:checked  ~ .lbl-menu #span-menu2{
+                        transform: rotate(140deg);
+                        top: 10px;
+                       }
+
+                       #btn-menu:checked  ~ .lbl-menu #span-menu3{
+                        transform: rotate(-140deg);
+                        top: 10px;
+                       }
+                       
+    
+                    }
+    
+                    
+    
+                    ul {
+                        position: absolute;
+                        display: block;
+                        top: 80px;
+                        left: 0px;
+                        display: none; 
+                        
+                    
+                        
+                        
+                                                   
+                        li {
+                            background-color: rgba($color: #59c1bd, $alpha: 1.0);
+                            border-left: none;
+                                                
+    
+                            a {
+                                display: flex;
+                                border-top: solid #cff5e7 2px;
+                                width: 100%;
+
+                                
+                                
+                                
+                                             
+                                
+                            }
+                            #facturar{
+                                border-bottom: solid #cff5e7 2px;
+                                border-right: none;
+                            }
+    
+    
+                            @media  (hover: hover){
+                                a:hover{
+                                    background-color: rgba($color: #0d4c92, $alpha: 0.5);
+                                    color: #cff5e7;
+                                    
+                                }
+                            }
+    
+                            a:active{
+                                background-color: rgba($color: #cff5e7, $alpha: 0.5);
+                                color: #0d4c92;
+                                
+                            }
+                            
+    
+    
+                        }
+                    }
+                    #btn-menu:checked ~ ul{
+                        display: block;
+                        
+                    }
+                }
+            }
+    
         }
 
         
