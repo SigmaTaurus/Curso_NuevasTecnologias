@@ -173,32 +173,21 @@
                         top: 80px;
                         left: 0px;
                         display: none; 
-                        
-                    
-                        
-                        
-                                                   
+
                         li {
                             background-color: rgba($color: #59c1bd, $alpha: 1.0);
-                            border-left: none;
-                                                
+                            border-left: none;                                                
     
                             a {
                                 display: flex;
                                 border-top: solid #cff5e7 2px;
                                 width: 100%;
 
-                                
-                                
-                                
-                                             
-                                
                             }
                             #facturar{
                                 border-bottom: solid #cff5e7 2px;
                                 border-right: none;
-                            }
-    
+                            }    
     
                             @media  (hover: hover){
                                 a:hover{
@@ -210,17 +199,13 @@
     
                             a:active{
                                 background-color: rgba($color: #cff5e7, $alpha: 0.5);
-                                color: #0d4c92;
-                                
+                                color: #0d4c92;                                
                             }
-                            
-    
-    
                         }
                     }
+
                     #btn-menu:checked ~ ul{
-                        display: block;
-                        
+                        display: block;                        
                     }
                 }
             }
